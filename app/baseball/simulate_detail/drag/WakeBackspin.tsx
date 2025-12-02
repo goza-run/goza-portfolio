@@ -33,7 +33,7 @@ const WakeBackspin = () => {
 
       {/* ラベル */}
       <div className="absolute top-4 right-6 z-10 flex flex-col items-end gap-1">
-         <span className="text-green-300 text-lg font-bold">ざらざらのボール(バックスピン)</span>
+         <span className="text-green-300 text-lg font-bold">バックスピン</span>
       </div>
 
       {/* アニメーションエリア */}

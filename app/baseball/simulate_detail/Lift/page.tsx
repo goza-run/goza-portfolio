@@ -227,8 +227,9 @@ export default function LiftPage() {
             <p className="text-gray-400 text-left mb-4">
             よって<span className="text-xl font-bold text-blue-400">160km/hではバックスピンで3345rpmほどの回転でようやく重力に勝つことができる</span>とわかりました。<br/>
             ちなみにこの時の結果から<InlineMath math="C_{l0}"/>を出してみると、
-            <BlockMath math="C_{l0}=\frac{ 0.2760}{0.29^{0.7}}=0.6564...≒0.656"/>
             </p>
+            <BlockMath math="C_{l0}=\frac{ 0.2760}{0.29^{0.7}}=0.6564...≒0.656"/>
+            
             <p className="text-gray-400 text-left mb-4">
             これでグラフを書いてみるとこんな感じになりました。
             </p>

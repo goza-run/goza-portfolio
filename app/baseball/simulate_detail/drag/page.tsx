@@ -11,7 +11,7 @@ import Wakebackspin from '@/app/baseball/simulate_detail/drag/WakeBackspin';
 // ★必ず「export default function」で関数コンポーネントを返す必要があります
 export default function DragPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 pt-24">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 pt-24">
             {/*左上のホームへ戻るリンク*/}
             <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
             <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
@@ -58,7 +58,7 @@ export default function DragPage() {
                         </Link>
             </div>
             
-            <h2 className="text-2xl float-left font-semibold mb-2 ">はじめに</h2>
+            <h2 className="text-2xl font-semibold mb-2 ">はじめに</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             この記事は<span className="font-bold text-red-600">物理学科の大学生</span>が独学で野球ボールに影響する抵抗に関して勉強した内容です。<br />
@@ -68,7 +68,7 @@ export default function DragPage() {
             また、この記事では数学的な記述や専門用語が含まれる場合がありますが、できるだけわかりやすく説明するよう努めます。
             ご不明な点があれば、お気軽にお問い合わせください。
             </p>
-            <h2 className="text-2xl float-left font-semibold mb-2 ">今回使う物理量の数値</h2>
+            <h2 className="text-2xl font-semibold mb-2 ">今回使う物理量の数値</h2>
             <br/><br/>
             
                 <ul className="text-gray-400 text-left mb-4 list-disc list-inside">
@@ -79,7 +79,7 @@ export default function DragPage() {
                     <li>空気の粘性率<InlineMath math="\mu:1.789\times10^{-5}Pa \cdot s"/></li>
                 </ul>
             
-            <h2 className="text-2xl float-left font-semibold mb-2">層流・乱流</h2>
+            <h2 className="text-2xl font-semibold mb-2">層流・乱流</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             ボールを投げると空気抵抗でどんどん遅くなることは当たり前と認識しているはずです。<br/>
@@ -98,7 +98,7 @@ export default function DragPage() {
             <Wakesmooth/>
             <Wakerough/>
             <Wakebackspin/>
-            <h2 className="text-2xl float-left font-semibold mb-2">レイノルズ数(<InlineMath math="R_e"/>)</h2>
+            <h2 className="text-2xl font-semibold mb-2">レイノルズ数(<InlineMath math="R_e"/>)</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             材質によって空気抵抗が変わることは理解できたと思います。一方で、<span className="font-bold text-blue-400">空気の速度</span>によっても空気抵抗は変化します。層流が乱流に変わる速度の基準を設けましょう。<br/>
@@ -127,7 +127,7 @@ export default function DragPage() {
             野球ボールでは80km/h(<InlineMath math="R_e≒112\times10^3"/>)以下で層流、320km/h以上(<InlineMath math="R_e≒448\times10^3"/>)で完全に乱流になるらしいです。<br/>
             つまり、野球では層流から乱流への遷移過程という微妙な気流状態でピッチャーがボールを投げているわけですね。
             </p>
-            <h2 className="text-2xl float-left font-semibold mb-2">抵抗係数(<InlineMath math="C_d"/>)</h2>
+            <h2 className="text-2xl  font-semibold mb-2">抵抗係数(<InlineMath math="C_d"/>)</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             さて、とうとう空気抵抗力(<InlineMath math="F_D"/>)について立式しましょう。<br/>
@@ -153,7 +153,7 @@ export default function DragPage() {
                                 />
                                 <p className="text-gray-400 text-sm">NASAのグラフ</p>
             </div>
-            <h2 className="text-lg float-left font-semibold mb-2">レイノルズ数と抵抗係数の関係</h2>
+            <h2 className="text-lg  font-semibold mb-2">レイノルズ数と抵抗係数の関係</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             NASAが野球ボールの空気抵抗に関して話していたので、そこでの図を参照させてもらいました(破線の方が野球ボール)。<br/>
@@ -234,7 +234,7 @@ export default function DragPage() {
             いかがでしょうか？結構いい感じにできたと思っています。レイノルズ数ではわかりにくいので球速の点も置いてみましたが、<br/>
             私のグラフでは100km/hで抵抗は最も小さくなる計算になりました。私が作った投球シミュレーターではこの計算式を利用しています😎
             </p>
-            <h2 className="text-lg float-left font-semibold mb-2">文献・URL</h2>
+            <h2 className="text-lg font-semibold mb-2">文献・URL</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             [1] ロバート・K・アデア 著, 中村和幸 訳, 『ベースボールの物理学』, 紀伊國屋書店, 1996年<br/>
@@ -255,7 +255,7 @@ export default function DragPage() {
             rel="noopener noreferrer"
             className="text-blue-400 hover:underline"
             >
-                https://https://www.cambridge...
+                //https://www.cambridge...
             </Link>
                 , Accessed:2025-11-29
             

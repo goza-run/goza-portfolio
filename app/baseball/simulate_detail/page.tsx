@@ -38,7 +38,7 @@ export default function simulate_detailHub(){
             </div>
             <div className="text-center mb-16 text-lg">
                 <h1 className="text-5xl font-bold mb-4">野球ボールの軌道について</h1>
-                <h2 className="text-2xl font-semibold mb-2 ">---------------------⇩Invitation Card⇩---------------------</h2>
+                <h2 className="text-2xl font-semibold mb-2 ">⇩Invitation Card⇩</h2>
                 {/*但書*/}
                 <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mx-auto">
                     {articles.map((article,index)=>(
@@ -60,7 +60,7 @@ export default function simulate_detailHub(){
                     ))}
 
                 </div>
-                <h2 className="text-2xl font-semibold mb-2 ">---------------------⇧Invitation Card⇧---------------------</h2>
+                <h2 className="text-2xl font-semibold mb-2 ">⇧Invitation Card⇧</h2>
                 <h2 className="text-2xl float-left font-semibold mb-2 ">注意</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
