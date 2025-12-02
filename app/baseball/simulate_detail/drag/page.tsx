@@ -121,7 +121,8 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             上の式はvの単位がm/sなのでkm/hという馴染みのある単位に変化させましょう。
             </p>
-            <BlockMath math="R_e=\frac{1.225\times2\times0.0368}{1.789\times10^{-5}}\times\frac{v}{3.6}=v\times1399.91...≒1.4\times10^3v"/>
+            <BlockMath math="R_e=\frac{1.225\times2\times0.0368}{1.789\times10^{-5}}\times\frac{v}{3.6}"/>
+            <BlockMath math="=v\times1399.91...≒1.4\times10^3v"/>
             <p className="text-gray-400 text-left mb-4">
             少し古い本にはなりますが、ロバート・アデア著「ベースボールの物理学」によると、<br />
             野球ボールでは80km/h(<InlineMath math="R_e≒112\times10^3"/>)以下で層流、320km/h以上(<InlineMath math="R_e≒448\times10^3"/>)で完全に乱流になるらしいです。<br/>
