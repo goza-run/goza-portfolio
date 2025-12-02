@@ -17,7 +17,7 @@ export default function Home(){
             
             </div>
             <div className="text-center mb-16 text-lg">
-                <h1 className="text-5xl font-bold mb-4">自己紹介</h1>
+                <h1 className="text-3xl md:text-5xl font-bold mb-4">自己紹介</h1>
                 {/*自己紹介内容*/}
                 <h2 className="text-2xl float-left font-semibold mb-2 ">はじめに</h2>
                 <br /><br />

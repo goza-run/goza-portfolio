@@ -24,8 +24,8 @@ export default function DragPage() {
             投球シミュレーターを開く
             </Link>
             </div>
-            <div className="text-center mb-16 text-lg">
-            <h1 className="text-5xl font-bold mb-4">野球ボールに影響する空気抵抗について</h1>
+            <div className="w-full max-w-3xl mb-16 text-lg break-words">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">野球ボールに影響する空気抵抗について</h1>
             <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mb-16 mx-auto ">
                         <Link
                         href="/baseball/simulate_detail"
@@ -95,9 +95,11 @@ export default function DragPage() {
             なのでウェイクの大きなツルツルのボールの方が空気抵抗が大きくなるわけですね。<br/>
             これは無回転のボールをイメージしていますので、例えばバックスピンなどの回転がかかっている場合はボールの上側と下側で剥離点がずれて、ウェイクが傾くでしょうね(マグヌス効果の話になっちゃう)。
             </p>
+            <div className="space-y-4 mb-8 overflow-x-auto max-w-full">
             <Wakesmooth/>
             <Wakerough/>
             <Wakebackspin/>
+            </div>
             <h2 className="text-2xl font-semibold mb-2">レイノルズ数(<InlineMath math="R_e"/>)</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
@@ -105,24 +107,34 @@ export default function DragPage() {
             層流はみんな同じ方向を同じような速さで進行しなければいけませんから、それぞれが流れを保とうとする力、<span className="text-xl font-bold text-blue-400">粘性力<InlineMath math="F_{viscous}"/></span>が必要ですね。<br/>
             今回は、簡単のため長さLの立方体の流体ブロックで力を考えてみましょう。空気が断面積Sを速度vで進行している場合空気の粘性係数をμとすると、
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="F_{viscous}=\mu \times \frac{dv}{dL} \times S≒\mu \times \frac{v}{L} \times L^2=\mu v L"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             次に、乱流が起きるためにはどんな力が必要か、これはそれぞれが別々の速度で進行し続けることができるような力、<span className="text-xl font-bold text-blue-400">慣性力<InlineMath math="F_{inertia}"/></span>が必要ですね。
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="F_{inertia}=ma=\rho V a≒\rho L^3 \frac{v}{t}=\rho L^3 \frac{v^2}{L}=\rho v^2 L^2"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">これら二つの比をとると</p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="R_e=\frac{F_{inertia}}{F_{viscous}}=\frac{\rho v L}{\mu}"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             となります。この値をレイノルズ数と呼びます。今回、ボールから見た空気の相対速度ということで、空気の速度vは球速ということにします。<br/>
             レイノルズ数を速度を代入しただけで出せるようにするためにちょっと計算しましょう。<br/>
             今回は球なので幅Lについては一律直径(2r)に近似します。
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="R_e=\frac{1.225\times2\times0.0368}{1.789\times10^{-5}}v"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             上の式はvの単位がm/sなのでkm/hという馴染みのある単位に変化させましょう。
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="R_e=\frac{1.225\times2\times0.0368}{1.789\times10^{-5}}\times\frac{v}{3.6}"/>
             <BlockMath math="=v\times1399.91...≒1.4\times10^3v"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             少し古い本にはなりますが、ロバート・アデア著「ベースボールの物理学」によると、<br />
             野球ボールでは80km/h(<InlineMath math="R_e≒112\times10^3"/>)以下で層流、320km/h以上(<InlineMath math="R_e≒448\times10^3"/>)で完全に乱流になるらしいです。<br/>
@@ -134,11 +146,15 @@ export default function DragPage() {
             さて、とうとう空気抵抗力(<InlineMath math="F_D"/>)について立式しましょう。<br/>
             ボールが空気から受ける動圧qに関して、これは単位体積あたりの粒子の運動エネルギーとして捉えることができ、<br/>
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="q=\frac{1}{2} \rho v^2"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             これに面積をかけてしまえば空気抵抗が出てくるはずです。断面積をSとすると、
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="F_D=qSC_d=\frac{1}{2} \rho v^2SC_d"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             おっと、何かつきましたね。<InlineMath math="C_d"/>は<span className="font-bold text-blue-400">抵抗係数</span>と呼ばれるもので、基本時には実験などから得られる値です。<br/>
             粘性流体の運動方程式である<span className="font-bold text-blue-400">ナビエ・ストークスの運動方程式</span>を解けば導けるものですがこいつの一般解が見つかっていないので今のところはどうしようもないです(見つかったら100万ドル)。<br/>
@@ -162,7 +178,9 @@ export default function DragPage() {
             <span className="text-white text-lg font-bold">①急激な下降</span>：グラフでは<InlineMath math="R_e\times10^{-5}≒1.0"/>で急激に抵抗が下降していきます。これを流体力学では<span className="text-xl font-bold text-blue-400">「Drag Crisis(抵抗の危機)」</span>と呼びます。<br/>
             これをグラフで表すためにシグモイド関数と呼ばれるものを使おうと思います。今回使う形は係数kを用いて
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="f(R_e)=\frac{\Delta C_d}{1+e^{k(\frac{R_e-R_{e_{trans}}}{R_{e_{trans}}})}}"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             こんな感じのを使います。<br/>
             <InlineMath math="\Delta C_d"/>は最大値と最小値の差です。<InlineMath math="R_{e_{trans}}"/>は急激に低下しているラインの真ん中のレイノルズ数、大体1かな？なんでこんなややこしい式にするかは後で説明しますので<br/>
@@ -185,13 +203,17 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             さて、緩やかな上昇に関してはlogを使って表現しましょう。係数<InlineMath math="C_{d_{rise}}"/>
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="g(R_e)=C_{rise}log_{10}(max(1,R_e))"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             <InlineMath math="R_e\times10^{-5}=1"/>以下のときはこの項は0、係数<InlineMath math="C_{d_{rise}}"/>は<InlineMath math="R_e\times10^{-5}=10"/>になるときの抵抗係数の上がり幅とすればいいでしょう。<br/>
 
             <span className="text-lg font-bold">結論</span>：①、②と抵抗係数の最小値<InlineMath math="C_{d_{min}}"/>を組み合わせて式を作ると、
             </p>
+            <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="C_d=C_{d_{min}}+ \frac{C_{d_{laminar}}-C_{d_{min}}}{1+e^{k(\frac{R_e-R_{e_{trans}}}{R_{e_{trans}}})}}+C_{rise}log_{10}(max(1,R_e))"/>
+            </div>
             <p className="text-gray-400 text-left mb-4">
             ここまで説明しても正直あんまり意味がわかんないと思うので、図で説明します。
             </p>
@@ -256,7 +278,7 @@ export default function DragPage() {
             rel="noopener noreferrer"
             className="text-blue-400 hover:underline"
             >
-                //https://www.cambridge...
+                https://www.cambridge...
             </Link>
                 , Accessed:2025-11-29
             

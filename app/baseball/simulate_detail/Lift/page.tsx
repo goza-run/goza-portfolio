@@ -28,7 +28,7 @@ export default function LiftPage() {
             
             </div>
             <div className="text-center mb-16 text-lg">
-            <h1 className="text-5xl font-bold mb-4">野球ボールに影響するマグヌス力/効果について</h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">野球ボールに影響するマグヌス力/効果について</h1>
             <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mb-16 mx-auto ">
                         <Link
                         href="/baseball/simulate_detail"
