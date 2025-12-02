@@ -149,7 +149,7 @@ export default function DragPage() {
                                 alt="NASAのグラフ"
                                 width={400}
                                 height={400}
-                                className="my-4 rounded-lg border border-gray-700"
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
                                 />
                                 <p className="text-gray-400 text-sm">NASAのグラフ</p>
             </div>
@@ -177,7 +177,7 @@ export default function DragPage() {
                                 alt="剥離点の説明"
                                 width={600}
                                 height={600}
-                                className="my-4 rounded-lg border border-gray-700"
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
                                 />
                                 
             </div>
@@ -200,7 +200,7 @@ export default function DragPage() {
                                 alt="手書きのイメージ"
                                 width={600}
                                 height={600}
-                                className="my-4 rounded-lg border border-gray-700"
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
                                 />
                                 
             </div>
@@ -226,7 +226,7 @@ export default function DragPage() {
                                 alt="プロットの結果"
                                 width={600}
                                 height={600}
-                                className="my-4 rounded-lg border border-gray-700"
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
                                 />
                                 <p className="text-xl text-gray-400 text-sm">⚫️：80km/h, 🔴100km/h, 🟣:160km/h, 🟡:320km/h</p>
             </div>
