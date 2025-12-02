@@ -24,22 +24,17 @@ export default function simulate_detailHub(){
     return(
         <main className="flex min-h-screen flex-col items-center justify-center p-8 pt-24 ">
             {/*左上のホームへ戻るリンク*/}
-            <div className="absolute top-4 left-4">
+            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
             <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
-            ホームへ戻る
+             ホームへ戻る
             </Link>
-            </div>
-            {/*真ん中の自己紹介リンク*/}
-            <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
             <Link href="/introduce" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
             自己紹介ページへ
             </Link>
-            </div>
-            {/*右上のボールの軌道についてリンク*/}
-            <div className="absolute top-4 right-4">
             <Link href="/baseball" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
             投球シミュレーターを開く
             </Link>
+            
             </div>
             <div className="text-center mb-16 text-lg">
                 <h1 className="text-5xl font-bold mb-4">野球ボールの軌道について</h1>

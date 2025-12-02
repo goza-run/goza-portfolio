@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-export default function Home() {
+export default function Unitypage() {
   // Unityのファイルを読み込む設定
   // ※ファイル名(unity-build...)が違う場合は、実際のファイル名に合わせて書き換えてください
   const { unityProvider } = useUnityContext({
@@ -14,35 +14,45 @@ export default function Home() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-gray-900 text-white">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 pt-8 bg-gray-900 text-white">
         {/*左上のホームへ戻るリンク*/}
-          <div className="absolute top-4 left-4">
+        {/* 【修正1：ナビゲーションエリア】
+        - absoluteをやめて、flexコンテナで包みました。
+        - w-full max-w-4xl: 横幅いっぱいに広がるが、広がりすぎないように制限。
+        - flex flex-col: スマホ初期設定では「縦積み」。
+        - md:flex-row: PC画面（mdサイズ以上）では「横並び」。
+        - gap-4: ボタン間の隙間。
+      */}
+          <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
           <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
           ホームへ戻る
           </Link>
-          </div>
-          {/*真ん中の自己紹介リンク*/}
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
           <Link href="/introduce" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
           自己紹介ページへ
           </Link>
-          </div>
-          {/*右上のボールの軌道についてリンク*/}
-          <div className="absolute top-4 right-4">
           <Link href="/baseball/simulate_detail" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
           ボールの軌道について
           </Link>
           </div>
+          
+          
+          
       <h1 className="text-3xl font-bold mb-6">
         Goza's Baseball Simulator
       </h1>
       
 
-      <div className="border-4 border-blue-500 rounded-lg overflow-hidden shadow-2xl">
+      <div className="relative w-full max-w-[960px] aspect-[960/600] border-4 border-blue-500 rounded-lg overflow-hidden shadow-2xl">
         {/* Unityを表示するコンポーネント */}
+        {/*
+        Unityを画面の大きさに合わせて自動で変わるように設定する
+        箱をrelative(基準)にしてunityを何がなんでも箱の四隅(top-0 left-0 w-full h-full)に貼り付ける(absolute)
+        */ }
         <Unity 
           unityProvider={unityProvider} 
-          style={{ width: "960px", height: "600px" }} 
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ width: "100%", height: "100%" }} 
+          devicePixelRatio={1}//画質を制限
         />
       </div>
 
@@ -53,6 +63,7 @@ export default function Home() {
         {/*紹介*/}
         <p className="text-white">
           UnityとC#で開発した野球投球シミュレーターです。流体力学に基づいてボールの軌道を計算します。<br />
+          スマホで使う場合は横画面を推奨します(なんならPC・タブレットなどの大画面)。<br/>
           詳しい計算手法については、右上の「ボールの軌道について」リンクから解説ページをご覧ください。
         </p>
         

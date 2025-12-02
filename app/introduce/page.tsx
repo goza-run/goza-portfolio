@@ -4,22 +4,17 @@ export default function Home(){
     return(
         <main className="flex min-h-screen flex-col items-center justify-center p-8 pt-24">
             {/*左上のホームへ戻るリンク*/}
-            <div className="absolute top-4 left-4">
+            <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
             <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
-            ホームへ戻る
+             ホームへ戻る
             </Link>
-            </div>
-            {/*真ん中の自己紹介リンク*/}
-            <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
             <Link href="/introduce" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
             自己紹介ページへ
             </Link>
-            </div>
-            {/*右上のボールの軌道についてリンク*/}
-            <div className="absolute top-4 right-4">
             <Link href="/baseball" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
             投球シミュレーターを開く
             </Link>
+            
             </div>
             <div className="text-center mb-16 text-lg">
                 <h1 className="text-5xl font-bold mb-4">自己紹介</h1>
@@ -68,7 +63,7 @@ export default function Home(){
                     <p className="text-gray-400 text-sm">開発環境</p>
                     </div>
                     
-                    <li>満伏屋: 友人用に公開している食事管理ウェブアプリです。<br/>
+                    <li>Manpukuya: 友人用に公開している食事管理ウェブアプリです。<br/>
                         基本的に会員制で、友人のみが利用可能です。
                         詳しい内容はgithubのreadmeをご覧ください。<br/>
                         <a 
@@ -80,7 +75,7 @@ export default function Home(){
                         githubリポジトリはこちら
                         </a>
                     </li>
-                    <div className="flex flex-col items-center">
+                    {/*<div className="flex flex-col items-center">
                     <Image
                     src="/images/Manpukuyapreview.png"
                     alt="満伏屋のスクリーンショット"
@@ -89,7 +84,7 @@ export default function Home(){
                     className="my-4 rounded-lg border border-gray-700"
                     />
                     <p className="text-gray-400 text-sm">こんな感じ</p>
-                    </div>
+                    </div>*/}
                 </ul>
                 <section className="text-center pt-8 border-t border-gray-700">
                 <p className="text-gray-300 mb-6">
