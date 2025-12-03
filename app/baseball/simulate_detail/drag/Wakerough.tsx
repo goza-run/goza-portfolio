@@ -33,7 +33,7 @@ const Wakerough = () => {
 
       {/* ラベル */}
       <div className="absolute top-4 right-6 z-10 flex flex-col items-end gap-1">
-         <span className="text-red-300 text-lg font-bold">ざらざら</span>
+         <span className="text-red-300 text-lg font-bold">ざらざら(無回転)</span>
       </div>
 
       {/* アニメーションエリア */}

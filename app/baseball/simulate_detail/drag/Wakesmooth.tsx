@@ -33,7 +33,7 @@ const Wakesmooth = () => {
 
       {/* ラベル */}
       <div className="absolute top-4 right-6 z-10 flex flex-col items-end gap-1">
-         <span className="text-blue-300 text-lg font-bold">ツルツル</span>
+         <span className="text-blue-300 text-lg font-bold">ツルツル(無回転)</span>
       </div>
 
       {/* アニメーションエリア */}
