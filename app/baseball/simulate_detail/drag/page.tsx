@@ -214,7 +214,7 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             <InlineMath math="R_e\times10^{-5}=1"/>以下のときはこの項は0、係数<InlineMath math="C_{rise}"/>は<InlineMath math="R_e\times10^{-5}=10"/>になるときの抵抗係数の上がり幅とすればいいでしょう。<br/>
 
-            <span className="text-lg font-bold">結論</span>：①、②と抵抗係数の最小値<InlineMath math="C_{d_{min}}"/>を組み合わせて式を作ると、
+            <span className="text-lg text-white font-bold">結論</span>：①、②と抵抗係数の最小値<InlineMath math="C_{d_{min}}"/>を組み合わせて式を作ると、
             </p>
             <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="C_d=C_{d_{min}}+ \frac{C_{d_{laminar}}-C_{d_{min}}}{1+e^{k(\frac{R_e-R_{e_{trans}}}{R_{e_{trans}}})}}+C_{rise}log_{10}(max(1,R_e))"/>
