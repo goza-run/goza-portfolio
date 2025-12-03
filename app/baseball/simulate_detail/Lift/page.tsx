@@ -105,8 +105,15 @@ export default function LiftPage() {
             逆に下側の方は正反対の方向をしているので無回転の時以上にエネルギーを要します(エスカレーターを逆走している感じ)。<br/>
             となると当然上下で気流の向きが異なってくるので、今回は斜め下向きにウェイクが生まれてしまいます。従来であれば真横のウェイクを下に動かしたということで、ボールにはその反作用として<span className="font-bold text-blue-400">上向きの力</span>が加わります。<br/>
             </p>
+            <div className="mb-8 w-full overflow-x-auto">
+            <div className="space-y-4 mb-8 overflow-x-auto max-w-full">
             <Wakerough/>
             <Wakebackspin/>
+            </div>
+            <p className="text-white text-xs text-center mt-2 mt:hidden">
+                ※はみ出てたらスクロールできます。
+            </p>
+            </div>
             <h2 className="text-2xl float-left font-semibold mb-2">境界面の外側におけるマグヌス力</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">

@@ -95,10 +95,15 @@ export default function DragPage() {
             なのでウェイクの大きなツルツルのボールの方が空気抵抗が大きくなるわけですね。<br/>
             これは無回転のボールをイメージしていますので、例えばバックスピンなどの回転がかかっている場合はボールの上側と下側で剥離点がずれて、ウェイクが傾くでしょうね(マグヌス効果の話になっちゃう)。
             </p>
+            <div className="mb-8 w-full overflow-x-auto">
             <div className="space-y-4 mb-8 overflow-x-auto max-w-full">
             <Wakesmooth/>
             <Wakerough/>
             <Wakebackspin/>
+            </div>
+            <p className="text-white text-xs text-center mt-2 mt:hidden">
+                ※はみ出てたらスクロールできます。
+            </p>
             </div>
             <h2 className="text-2xl font-semibold mb-2">レイノルズ数(<InlineMath math="R_e"/>)</h2>
             <br/><br/>
@@ -184,7 +189,7 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             こんな感じのを使います。<br/>
             <InlineMath math="\Delta C_d"/>は最大値と最小値の差です。<InlineMath math="R_{e_{trans}}"/>は急激に低下しているラインの真ん中のレイノルズ数、大体1かな？なんでこんなややこしい式にするかは後で説明しますので<br/>
-            一旦範囲が0~<InlineMath math="\Delta C_d"/>でR_eが大きくなるごとに値が小さくなる関数だと思ってください。<br/>
+            一旦範囲が0~<InlineMath math="\Delta C_d"/>で<InlineMath math="R_e"/>が大きくなるごとに値が小さくなる関数だと思ってください。<br/>
             <span className="text-white text-lg font-bold">②緩やかな上昇</span>：しかし、この後ですが
             ここまで話を聞いてくれた方には少し違和感があると思います。<br/>
             <span className="text-xl font-bold text-blue-400">レイノルズ数の増加に比例して抵抗は小さくなるはずなのにある点で最小値を取った後に増加しています。</span><br/>
@@ -201,13 +206,13 @@ export default function DragPage() {
                                 
             </div>
             <p className="text-gray-400 text-left mb-4">
-            さて、緩やかな上昇に関してはlogを使って表現しましょう。係数<InlineMath math="C_{d_{rise}}"/>
+            さて、緩やかな上昇に関してはlogを使って表現しましょう。
             </p>
             <div className="overflow-x-auto max-w-full mb-4">
             <BlockMath math="g(R_e)=C_{rise}log_{10}(max(1,R_e))"/>
             </div>
             <p className="text-gray-400 text-left mb-4">
-            <InlineMath math="R_e\times10^{-5}=1"/>以下のときはこの項は0、係数<InlineMath math="C_{d_{rise}}"/>は<InlineMath math="R_e\times10^{-5}=10"/>になるときの抵抗係数の上がり幅とすればいいでしょう。<br/>
+            <InlineMath math="R_e\times10^{-5}=1"/>以下のときはこの項は0、係数<InlineMath math="C_{rise}"/>は<InlineMath math="R_e\times10^{-5}=10"/>になるときの抵抗係数の上がり幅とすればいいでしょう。<br/>
 
             <span className="text-lg font-bold">結論</span>：①、②と抵抗係数の最小値<InlineMath math="C_{d_{min}}"/>を組み合わせて式を作ると、
             </p>
@@ -231,7 +236,7 @@ export default function DragPage() {
             <InlineMath math="C_{d_{laminar}}"/>というのは今まで言っていた抵抗係数の最大値みたいなもんなのですが、細かくいうと<span className="font-bold text-blue-400">抵抗の危機(層流→乱流)が始まる前の抵抗係数</span>です。<br/>
             青は①が強く作用している範囲、赤は②が強く作用している範囲、紫はその両方が作用している範囲となります。<br/>
             <InlineMath math="R_e\times10^{-5}=R_{e_{trans}}"/>の時、<InlineMath math="C_d=\frac{C_{d_{min}}-C_{d_{laminar}}}{2}"/>となり、最大と最小の中間になります。<br/>
-            <InlineMath math="R_e\times10^{-5}=10"/>の時、<InlineMath math="C_d=C_{d_{min}}+C_{d_{rise}}"/>です。また、kの値が大きいほど①の下降は急になります。<br/>
+            <InlineMath math="R_e\times10^{-5}=10"/>の時、<InlineMath math="C_d=C_{d_{min}}+C_{rise}"/>です。また、kの値が大きいほど①の下降は急になります。<br/>
             NASAのグラフから<br/>
             </p>
             <ul className="text-gray-400 text-left mb-4 list-disc list-inside">
