@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   description: "神戸大学物理学科に在籍するGozaのポートフォリオサイト。Unity製の野球投球シミュレーターや、物理学（流体力学・マグヌス力）に基づいた変化球の軌道計算をわかりやすく解説した記事を公開しています。",
   keywords:["神戸大学","物理学科","野球","投球","シミュレーション","シミュレーター","Unity","マグヌス力","マグヌス効果","流体力学","自由研究","ボールの軌道","野球ボール","変化球"],
   
+  verification:{
+    google:"HnVHV0JDEvyh7_13LwhrOSHL3TO-OvcFMYUoUuA5MJg",
+  },
   openGraph:{
     title:"Goza's Portfolio",
     description:"物理学科生の作る野球の等級シミュレーター。ボールの軌道に関しても理論的に解説",
