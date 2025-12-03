@@ -96,7 +96,7 @@ export default function DragPage() {
             これは無回転のボールをイメージしていますので、例えばバックスピンなどの回転がかかっている場合はボールの上側と下側で剥離点がずれて、ウェイクが傾くでしょうね(マグヌス効果の話になっちゃう)。
             </p>
             <div className="mb-8 w-full overflow-x-auto">
-            <div className="space-y-4 min-w-max">
+            <div className="space-y-4 min-w-[600px]">
             <Wakesmooth/>
             <Wakerough/>
             <Wakebackspin/>

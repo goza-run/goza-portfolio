@@ -106,7 +106,7 @@ export default function LiftPage() {
             となると当然上下で気流の向きが異なってくるので、今回は斜め下向きにウェイクが生まれてしまいます。従来であれば真横のウェイクを下に動かしたということで、ボールにはその反作用として<span className="font-bold text-blue-400">上向きの力</span>が加わります。<br/>
             </p>
             <div className="mb-8 w-full overflow-x-auto">
-            <div className="space-y-4 min-w-max">
+            <div className="space-y-4 min-w-[600px]">
             
             <Wakerough/>
             <Wakebackspin/>
