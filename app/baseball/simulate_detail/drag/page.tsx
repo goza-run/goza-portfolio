@@ -175,7 +175,7 @@ export default function DragPage() {
                                 />
                                 <p className="text-gray-400 text-sm">NASAのグラフ</p>
             </div>
-            <h2 className="text-lg  font-semibold mb-2">レイノルズ数と抵抗係数の関係</h2>
+            <h2 className="text-2xl  font-semibold mb-2">レイノルズ数と抵抗係数の関係</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             NASAが野球ボールの空気抵抗に関して話していたので、そこでの図を参照させてもらいました(破線の方が野球ボール)。<br/>
@@ -233,7 +233,7 @@ export default function DragPage() {
                                 
             </div>
             <p className="text-gray-400 text-left mb-4">
-            <InlineMath math="C_{d_{laminar}}"/>というのは今まで言っていた抵抗係数の最大値みたいなもんなのですが、細かくいうと<span className="font-bold text-blue-400">抵抗の危機(層流→乱流)が始まる前の抵抗係数</span>です。<br/>
+            <InlineMath math="C_{d_{laminar}}"/>というのは今まで言っていた抵抗係数の最大値みたいなもんなのですが、細かくいうと<span className="font-bold text-blue-400">Drag Crisis(層流→乱流)が始まる前の抵抗係数</span>です。<br/>
             青は①が強く作用している範囲、赤は②が強く作用している範囲、紫はその両方が作用している範囲となります。<br/>
             <InlineMath math="R_e\times10^{-5}=R_{e_{trans}}"/>の時、<InlineMath math="C_d=\frac{C_{d_{min}}-C_{d_{laminar}}}{2}"/>となり、最大と最小の中間になります。<br/>
             <InlineMath math="R_e\times10^{-5}=10"/>の時、<InlineMath math="C_d=C_{d_{min}}+C_{rise}"/>です。また、kの値が大きいほど①の下降は急になります。<br/>
@@ -261,6 +261,25 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             いかがでしょうか？結構いい感じにできたと思っています。レイノルズ数ではわかりにくいので球速の点も置いてみましたが、<br/>
             私のグラフでは100km/hで抵抗は最も小さくなる計算になりました。私が作った投球シミュレーターではこの計算式を利用しています😎
+            </p>
+            <h2 className="text-2xl  font-semibold mb-2">おまけ(空気抵抗は速度の二乗則？)</h2>
+            <p className="text-gray-400 text-left mb-4">
+            こんな感じに複雑な事情を絡めて空気抵抗を見ていくと、学校で教わる<span className="font-bold text-blue-400">「空気抵抗は速度の二乗に比例」</span>がにわかに信じられなくなりました。<br/>
+            そこで実際にグラフを作ってみました。
+            </p>
+            <div className="flex flex-col items-center">
+                                <Image
+                                src="/images/Velocity_vs_fd.png"
+                                alt="速度と空気抵抗の関係"
+                                width={600}
+                                height={600}
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
+                                />
+                                <p className="text-xl text-gray-400 text-sm">🔵：今回のデータ,🟠：二乗に近似</p>
+            </div>
+            <p className="text-gray-400 text-left mb-4">
+            今回のデータをもとに球速と空気抵抗力の関係を見ると、60~80km/hはおそらくDrag Crisisの影響ですが、それを除いて考えた時に<br/>
+            大体二乗に比例していると考えても良いでしょう、よっぽどリアリティを追求したいような変態でなければ。
             </p>
             <h2 className="text-lg font-semibold mb-2">文献・URL</h2>
             <br/><br/>
