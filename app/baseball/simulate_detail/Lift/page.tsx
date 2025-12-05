@@ -12,15 +12,15 @@ export default function LiftPage() {
             
             {/* ナビゲーション */}
             <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
-                <Link href="/" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition w-full md:w-auto text-center">
-                 ホームへ戻る
-                </Link>
-                <Link href="/introduce" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition w-full md:w-auto text-center">
-                自己紹介ページへ
-                </Link>
-                <Link href="/baseball" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition w-full md:w-auto text-center">
-                投球シミュレーターを開く
-                </Link>
+            <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
+             ホームへ戻る
+            </Link>
+            <Link href="/introduce" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
+            自己紹介ページへ
+            </Link>
+            <Link href="/baseball" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
+            投球シミュレーターを開く
+            </Link>
             </div>
 
             {/* 【重要修正】記事全体の幅を制限し、はみ出しを防ぐ */}
