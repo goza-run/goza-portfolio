@@ -231,9 +231,9 @@ export default function LiftPage() {
             </p>
             <BlockMath math="S=\frac{r(\frac{\omega\cdot2\pi}{60})}{\frac{v}{3.6}}"/>
             <BlockMath math="0.29=\frac{3\pi}{25v}r\omega"/>
-            <BlockMath math="\omega=3344.5...≒3345rpm"/>
+            <BlockMath math="\omega=3349.2...≒3349rpm"/>
             <p className="text-gray-400 text-left mb-4">
-            よって<span className="text-xl font-bold text-blue-400">160km/hではバックスピンで3345rpmほどの回転でようやく重力に勝つことができる</span>とわかりました。<br/>
+            よって<span className="text-xl font-bold text-blue-400">160km/hではバックスピンで3350rpmほどの回転でようやく重力に勝つことができる</span>とわかりました。<br/>
             ちなみにこの時の結果から<InlineMath math="C_{l0}"/>を出してみると、
             </p>
             <BlockMath math="C_{l0}=\frac{ 0.2760}{0.29^{0.7}}=0.6564...≒0.656"/>
@@ -253,8 +253,20 @@ export default function LiftPage() {
                                 
             </div>
             <p className="text-gray-400 text-left mb-4">
-            いかがでしょうか、個人的には高い精度で近似できたと思っています。
+            いかがでしょうか、個人的には高い精度で近似できたと思っています。<br/>
+            最後にこの値を用いてマグヌス力が重力と釣り合う場合の球速・回転数のグラフを置いておきます。
             </p>
+            <div className="flex flex-col items-center">
+                                <Image
+                                src="/images/FireBall.png"
+                                alt="火の玉ストレートの基準"
+                                width={600}
+                                height={600}
+                                className="my-4 rounded-lg border border-gray-700"
+                                />
+                                <p className="text-xl text-gray-400 text-sm">🔴：160km/hの時</p>
+                                
+            </div>
            
             <h2 className="text-lg float-left font-semibold mb-2">文献・URL</h2>
             <br/><br/>
