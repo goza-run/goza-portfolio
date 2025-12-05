@@ -47,7 +47,8 @@ export default function Home(){
                     このポートフォリオサイトでは、私がこれまでに取り組んできた自由研究やプロジェクトの成果を紹介しています。<br />
                 </p>
                 <ul className="text-gray-400 text-left mb-4 list-disc list-inside">
-                    <li>野球投球シミュレーター: UnityとC#で開発し、流体力学に基づいてボールの軌道を計算します。<br/>
+                    <li><span className='text-white font-semibold'>野球投球シミュレーター</span> ：
+                        <br/>UnityとC#で開発し、流体力学に基づいてボールの軌道を計算します。<br/>
                         作成期間は約1ヶ月ほどで、随時アップデートを行っています(クソ雑魚アニメーションもいずれよくなるかも)。<br/>
                         リアルタイムでボールの回転数などからマグヌス力・抵抗力を計算し、なるべくリアルを追求したモデルを組み立てています。<br/>
                         詳しい物理モデルや計算手法については、ポートフォリオ内の解説記事をご覧ください。
@@ -63,7 +64,8 @@ export default function Home(){
                     <p className="text-gray-400 text-sm">開発環境</p>
                     </div>
                     
-                    <li>Manpukuya: 友人用に公開している食事管理ウェブアプリです。<br/>
+                    <li><span className='text-white font-semibold'>Manpukuya</span>
+                        <br/>: 友人用に公開している食事管理ウェブアプリです。<br/>
                         基本的に会員制で、友人のみが利用可能です。
                         詳しい内容はgithubのreadmeをご覧ください。<br/>
                         <a 
@@ -75,16 +77,16 @@ export default function Home(){
                         githubリポジトリはこちら
                         </a>
                     </li>
-                    {/*<div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center">
                     <Image
-                    src="/images/Manpukuyapreview.png"
-                    alt="満伏屋のスクリーンショット"
+                    src="/images/Manpukuya_image.png"
+                    alt="Manpukuyaのプレビュー"
                     width={400}
                     height={400}
                     className="my-4 rounded-lg border border-gray-700"
                     />
                     <p className="text-gray-400 text-sm">こんな感じ</p>
-                    </div>*/}
+                    </div>
                 </ul>
                 <section className="text-center pt-8 border-t border-gray-700">
                 <p className="text-gray-300 mb-6">
