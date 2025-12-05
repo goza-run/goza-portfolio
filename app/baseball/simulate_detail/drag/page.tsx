@@ -11,7 +11,7 @@ import Wakebackspin from '@/app/baseball/simulate_detail/drag/WakeBackspin';
 // ★必ず「export default function」で関数コンポーネントを返す必要があります
 export default function DragPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 pt-24">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 pt-24 bg-gray-900 text-white">
             {/*左上のホームへ戻るリンク*/}
             <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4 mb-14">
             <Link href="/" className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
@@ -25,8 +25,8 @@ export default function DragPage() {
             </Link>
             </div>
             <div className="w-full max-w-3xl mb-16 text-lg break-words">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">野球ボールに影響する空気抵抗について</h1>
-            <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mb-16 mx-auto ">
+            <h1 className="text-3xl md:text-5xl font-bold mb-8">野球ボールに影響する空気抵抗</h1>
+            <div className="flex flex-col md:flex-row justify-center gap-6 w-full mb-16 ">
                         <Link
                         href="/baseball/simulate_detail"
                         className={`group bg-gray-800 p-6 rounded-xl border-2 border-blue-500/50 hover:bg-gray-750 transition-all hover:-translate-y-1 hover:shadow-lg`}
