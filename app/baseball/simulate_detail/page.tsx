@@ -36,9 +36,9 @@ export default function simulate_detailHub(){
             </Link>
             
             </div>
-            <div className="text-center mb-16 text-lg">
                 <h1 className="text-3xl md:text-5xl font-bold mb-4">野球ボールの軌道について</h1>
-                <h2 className="text-2xl font-semibold mb-2 ">⇩Invitation Card⇩</h2>
+                
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">⇩Invitation Card⇩</h2>
                 {/*但書*/}
                 <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl mx-auto">
                     {articles.map((article,index)=>(
@@ -60,8 +60,10 @@ export default function simulate_detailHub(){
                     ))}
 
                 </div>
-                <h2 className="text-2xl font-semibold mb-2 ">⇧Invitation Card⇧</h2>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">注意</h2>
+                
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">⇧Invitation Card⇧</h2>
+                <div className="w-full max-w-3xl mb-16 text-lg break-words">
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">注意</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     この記事は<span className='font-bold text-red-600'>初学者向け</span>に野球ボールの軌道に関する基本的な物理モデルと計算手法を解説します。<br />
@@ -74,14 +76,14 @@ export default function simulate_detailHub(){
                     ご不明な点があれば、お気軽にお問い合わせください。
                 </p>
                 {/*本文*/}
-                <h2 className="text-2xl float-left font-semibold mb-2 ">はじめに</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">はじめに</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     野球ボールの軌道は、投手がボールを投げた瞬間からキャッチャーミットに到達するまでの間に、様々な力が作用して決まります。<br />
                     これらの力には、重力、空気抵抗、マグヌス力などがあります。<br />
                     この記事では、これらの力がどのようにボールの軌道に影響を与えるのかを解説し、私が開発した野球投球シミュレーターで用いている物理モデルや計算手法について紹介します。
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">物理モデル</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">物理モデル</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     野球ボールの軌道を計算するためには、まずボールに作用する力をモデル化する必要があります。<br />
@@ -94,7 +96,7 @@ export default function simulate_detailHub(){
                     最近ではボールの縫い目によって変化する特性(SSW)なども考慮されています。これは主にナックルボールなどの回転数が非常に低い球種で顕著に現れますが、<br/>私のシミュレーターではまだ実装していません。<br />
                     重力に関しては言わずもがなですのでここでは1.と2.について説明します。<br />
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">1.抗力(空気抵抗)</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">1.抗力(空気抵抗)</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     空気抵抗は誰でも聞き馴染みがあると思いますが、実際の原理はあまり知られていないかもしれません。<br />
@@ -115,7 +117,7 @@ export default function simulate_detailHub(){
                     />
                     <p className="text-gray-400 text-sm">ボールによって空気の流れ(青色矢印)が乱れる図</p>
                 </div>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">マグヌス力</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">2.マグヌス力</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     ボールが空気の流れを乱すことは理解いただけたと思います。<br />
@@ -135,7 +137,7 @@ export default function simulate_detailHub(){
                 </p>
                 <MagnusEffect/>
                 
-                <h2 className="text-2xl float-left font-semibold mb-2 ">投球シミュレーター</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">投球シミュレーター</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     以上のように、野球ボールの軌道は様々な力が複雑に絡み合って決まります。<br />
@@ -160,7 +162,7 @@ export default function simulate_detailHub(){
                 <p className='text-gray-400 text-left mb-4'>
                     この図ほどカッコよくはできていませんが、私のシミュレーターや実際の投球でも同じことが起きているわけですね。<br />
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">おまけ</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">おまけ</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     先ほどマグヌス力と重力がボールの軌道に影響を与えると説明しましたが、<br />

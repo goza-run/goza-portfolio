@@ -24,10 +24,10 @@ export default function LiftPage() {
             </div>
 
             {/* 【重要修正】記事全体の幅を制限し、はみ出しを防ぐ */}
-            <div className="w-full max-w-3xl mb-16 text-lg break-words">
+            
             
             <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">野球ボールに影響するマグヌス力</h1>
-            
+            <div className="w-full max-w-3xl mb-16 text-lg break-words">
             <div className="flex flex-col md:flex-row justify-center gap-6 w-full mb-16">
                         <Link
                         href="/baseball/simulate_detail"

@@ -16,23 +16,24 @@ export default function Home(){
             </Link>
             
             </div>
-            <div className="text-center mb-16 text-lg">
                 <h1 className="text-3xl md:text-5xl font-bold mb-4">自己紹介</h1>
                 {/*自己紹介内容*/}
-                <h2 className="text-2xl float-left font-semibold mb-2 ">はじめに</h2>
+                <div className="w-full max-w-3xl mb-16 text-lg break-words">
+
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">はじめに</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     閲覧いただきありがとうございます。Gozaです。<br />
                     このページでは私の自己紹介をさせていただきます。
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">📖学業について</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">📖学業について</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     神戸大学理学部物理学科に在籍しており、物理学の基礎から応用まで幅広く学んでいます。<br />
                     大学のOB、先輩方、もし3、4年次の講義の過去問があったらもらえると助かります🙇<br />
                     一方で、プログラミングやデータサイエンスにも興味を持ち、独学でスキルを磨いています。<br/> 
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">🎮趣味・興味</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">🎮趣味・興味</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     趣味は野球観戦とゲーム、そして自由研究です。<br />
@@ -41,7 +42,7 @@ export default function Home(){
                     ゲームは読み合いをするゲームが好きです。最近はオートチェスをしてます(誰も一緒にやってくれません😭)。<br />
                     自分が興味を持ったものについて深く掘り下げる自由研究も好きで、これまでに物理シミュレーションやデータ分析など様々なテーマに取り組んできました。<br />
                 </p>
-                <h2 className="text-2xl float-left font-semibold mb-2 ">💡作品について</h2>
+                <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">💡作品について</h2>
                 <br /><br />
                 <p className="text-gray-400 text-left mb-4">
                     このポートフォリオサイトでは、私がこれまでに取り組んできた自由研究やプロジェクトの成果を紹介しています。<br />
