@@ -315,7 +315,7 @@ export default function LiftPage() {
            
             <h2 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">文献・URL</h2>
             
-            <p className="text-gray-400 text-left mb-4 leading-relaxed text-sm break-all">
+            <p className="text-gray-400 text-left mb-4">
             [1] ロバート・K・アデア 著, 中村和幸 訳, 『ベースボールの物理学』, 紀伊國屋書店, 1996年<br/>
             [2] Alan M. Nathan, "The effect of spin on the flight of a baseball", 
             <Link 

@@ -282,7 +282,7 @@ export default function DragPage() {
             今回のデータをもとに球速と空気抵抗力の関係を見ると、60~80km/hはおそらくDrag Crisisの影響ですが、それを除いて考えた時に<br/>
             大体二乗に比例していると考えても良いでしょう、よっぽどリアリティを追求したいような変態でなければ。
             </p>
-            <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">文献・URL</h2>
+            <h2 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">文献・URL</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             [1] ロバート・K・アデア 著, 中村和幸 訳, 『ベースボールの物理学』, 紀伊國屋書店, 1996年<br/>
