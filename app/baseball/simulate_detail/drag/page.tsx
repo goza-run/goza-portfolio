@@ -191,10 +191,10 @@ export default function DragPage() {
             こんな感じのを使います。<br/>
             <InlineMath math="\Delta C_d"/>は最大値と最小値の差です。<InlineMath math="R_{e_{trans}}"/>は急激に低下しているラインの真ん中のレイノルズ数、大体1かな？なんでこんなややこしい式にするかは後で説明しますので<br/>
             一旦範囲が0~<InlineMath math="\Delta C_d"/>で<InlineMath math="R_e"/>が大きくなるごとに値が小さくなる関数だと思ってください。<br/>
-            <span className="text-white text-lg font-bold">②緩やかな上昇</span>：しかし、この後ですが
-            ここまで話を聞いてくれた方には少し違和感があると思います。<br/>
-            <span className="text-xl font-bold text-blue-400">レイノルズ数の増加に比例して抵抗は小さくなるはずなのにある点で最小値を取った後に増加しています。</span><br/>
+            <span className="text-white text-lg font-bold">②緩やかな上昇</span>：しかし、この後ですが<br/>
+            <span className="text-xl font-bold text-blue-400">レイノルズ数の増加に対して抵抗はある点で最小値を取った後に増加しています。</span><br/>
             これに関してですが、Elmar Achenback氏の文献を参考にすると、速度が上がるにつれて剥離点が前進してしまうみたいです。<br/>
+            レイノルズ数が<span className="text-blue-400 text-lg font-bold"><InlineMath math="\frac{慣性力}{粘性力}"/></span>で表されるため、慣性力が相対的に大きくなることで空気がボールから剥がれやすくなってしまうと考えることができます。<br/>
             </p>
             <div className="flex flex-col items-center">
                                 <Image
