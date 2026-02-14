@@ -114,7 +114,18 @@ export default function DragPage() {
             今回は、簡単のため長さLの立方体の流体ブロックで力を考えてみましょう。空気が断面積Sを速度vで進行している場合空気の粘性係数をμとすると、
             </p>
             <div className="overflow-x-auto max-w-full mb-4">
-            <BlockMath math="F_{viscous}=\mu \times \frac{dv}{dL} \times S≒\mu \times \frac{v}{L} \times L^2=\mu v L"/>
+            <BlockMath math="F_{viscous}=\mu \times \frac{dv}{dy} \times S≒\mu \times \frac{v}{L} \times L^2=\mu v L"/>
+            </div>
+            <div className="flex flex-col items-center">
+                                <Image
+                                src="/images/viscous_image.png"
+                                alt="剥離点の説明"
+                                width={500}
+                                height={500}
+                                className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
+                                />
+                                <p className="text-xl text-white text-sm">近似のイメージ</p>
+                                
             </div>
             <p className="text-gray-400 text-left mb-4">
             次に、乱流が起きるためにはどんな力が必要か、これはそれぞれが別々の速度で進行し続けることができるような力、<span className="text-xl font-bold text-blue-400">慣性力<InlineMath math="F_{inertia}"/></span>が必要ですね。
@@ -143,7 +154,7 @@ export default function DragPage() {
             </div>
             <p className="text-gray-400 text-left mb-4">
             少し古い本にはなりますが、ロバート・アデア著「ベースボールの物理学」によると、<br />
-            野球ボールでは80km/h(<InlineMath math="R_e≒112\times10^3"/>)以下で層流、320km/h以上(<InlineMath math="R_e≒448\times10^3"/>)で完全に乱流になるらしいです。<br/>
+            野球ボールでは80km/h(<InlineMath math="R_e≒112\times10^3"/>)以下で層流(もっと正確にいうと層流から乱流への遷移が始まる点)、<br/>320km/h以上(<InlineMath math="R_e≒448\times10^3"/>)で完全に乱流になるらしいです。<br/>
             つまり、野球では層流から乱流への遷移過程という微妙な気流状態でピッチャーがボールを投げているわけですね。
             </p>
             <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">抵抗係数(<InlineMath math="C_d"/>)</h2>
@@ -181,7 +192,8 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             NASAが野球ボールの空気抵抗に関して話していたので、そこでの図を参照させてもらいました(破線の方が野球ボール)。<br/>
             このグラフをもとに自分でも似たようなグラフを作ってみようと思いますが、この図にはいくつか特徴があるのでそれを先に説明します。<br/><br/>
-            <span className="text-white text-lg font-bold">①急激な下降</span>：グラフでは<InlineMath math="R_e\times10^{-5}≒1.0"/>で急激に抵抗が下降していきます。これを流体力学では<span className="text-xl font-bold text-blue-400">「Drag Crisis(抵抗の危機)」</span>と呼びます。<br/>
+            <span className="text-white text-lg font-bold">①急激な下降</span>：グラフでは<InlineMath math="R_e\times10^{-5}≒1.0"/>で急激に抵抗が下降していきます。<br/>
+            これは層流から乱流へ遷移し始める点であり、<span className="text-xl font-bold text-blue-400">「Drag Crisis(抵抗の危機)」</span>と呼びます。<br/>
             これをグラフで表すためにシグモイド関数と呼ばれるものを使おうと思います。今回使う形は係数kを用いて
             </p>
             <div className="overflow-x-auto max-w-full mb-4">
