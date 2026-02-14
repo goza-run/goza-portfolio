@@ -206,7 +206,7 @@ export default function DragPage() {
             <span className="text-white text-lg font-bold">②緩やかな上昇</span>：しかし、この後ですが<br/>
             <span className="text-xl font-bold text-blue-400">レイノルズ数の増加に対して抵抗はある点で最小値を取った後に増加しています。</span><br/>
             これに関してですが、Elmar Achenback氏の文献を参考にすると、速度が上がるにつれて剥離点が前進してしまうみたいです。<br/>
-            レイノルズ数が<span className="text-blue-400 text-lg font-bold"><InlineMath math="\frac{慣性力}{粘性力}"/></span>で表されるため、慣性力が相対的に大きくなることで空気がボールから剥がれやすくなってしまうと考えることができます。<br/>
+            また、乱流になっていくにつれて、空気がボールを激しく擦るようになるため、そのような摩擦による抵抗の増加もあると思います。
             </p>
             <div className="flex flex-col items-center">
                                 <Image
