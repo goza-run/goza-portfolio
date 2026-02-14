@@ -84,15 +84,15 @@ export default function DragPage() {
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
             ボールを投げると空気抵抗でどんどん遅くなることは当たり前と認識しているはずです。<br/>
-            しかし、ボールによって空気抵抗に違いがあることもきっと理解しています。野球ボールとガチャガチャのカプセルでは同じ形状・同じ重さだったとしても野球ボールの方がよく飛ぶでしょう。<br/>
-            この違いは一体なんでしょう？色々な要因はありますが、表面上に限った話で言えば<span className="text-xl font-bold text-blue-400">ざらざら具合</span>ですね。<br/>
+            しかし、ボールによって空気抵抗に違いがあることもきっと理解しています。<br/>野球ボールとガチャガチャのカプセルでは同じ形状・同じ重さだったとしても野球ボールの方がよく飛ぶでしょう。<br/>
+            この違いは一体なんでしょう？色々な要因はありますが、表面上に限った話で言えば<br/><span className="text-xl font-bold text-blue-400">ざらざら具合</span>ですね。<br/>
             通常気流は滑らかで全員が同じ方向を向いて流れていきます。これを<span className="text-xl font-bold text-blue-400">層流</span>といいます。<br/>
             一方でボールが進行していくと、気流が乱れて流れる方向がバラバラになるケースがあります。これを<span className="text-xl font-bold text-blue-400">乱流</span>といいます。
             <br/><br/>
             図をもとに考えてみましょう。ボールが高速で移動し、そこにある空気を押し除けていくと、ボールの通ってきたところには空気がなくなります。<br/>
-            つまりそこは低圧空間になるわけですね。その<span className="font-bold text-blue-400">後流(ウェイク)</span>と進行方向の圧力差によって空気抵抗が生まれるわけですが、<br/>
-            ツルツルのボールでは気流がボールにまとわりつく力が弱く、<span className="font-bold text-blue-400">ボールの表面と接する空気がすぐにボールから剥離してしまい</span>大きなウェイクが出来上がります(層流)。<br/>
-            一方でざらざらのボールではボールの表面と接する空気がギリギリまでまとわりつくので<span className="font-bold text-blue-400">剥離が遅くなり</span>ウェイクは小さくなります(乱流)。<br/>
+            つまりそこは低圧空間になるわけですね。その<span className="font-bold text-blue-400">後流(ウェイク)</span>と進行方向の圧力差によって空気抵抗が生まれるわけですが、<br/><br/>
+            (Ⅰ)ツルツルのボールでは気流がボールにまとわりつく力が弱く、<br/><span className="font-bold text-blue-400">空気がすぐにボール表面から剥離してしまい</span>大きなウェイクが出来上がります(層流)。<br/>
+            (Ⅱ)一方でざらざらのボールではボールの表面と接する空気がギリギリまでまとわりつくので<span className="font-bold text-blue-400">剥離が遅くなり</span>ウェイクは小さくなります(乱流)。<br/>
             なのでウェイクの大きなツルツルのボールの方が空気抵抗が大きくなるわけですね。<br/>
             これは無回転のボールをイメージしていますので、例えばバックスピンなどの回転がかかっている場合はボールの上側と下側で剥離点がずれて、ウェイクが傾くでしょうね(マグヌス効果の話になっちゃう)。
             </p>
@@ -109,7 +109,7 @@ export default function DragPage() {
             <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">レイノルズ数(<InlineMath math="R_e"/>)</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
-            材質によって空気抵抗が変わることは理解できたと思います。一方で、<span className="font-bold text-blue-400">空気の速度</span>によっても空気抵抗は変化します。層流が乱流に変わる速度の基準を設けましょう。<br/>
+            材質によって空気抵抗が変わることは理解できたと思います。一方で、<span className="font-bold text-blue-400">空気の速度</span>によっても空気抵抗は変化します。<span className="font-bold text-blue-400">層流が乱流に変わる速度の基準</span>を設けましょう。<br/>
             層流はみんな同じ方向を同じような速さで進行しなければいけませんから、それぞれが流れを保とうとする力、<span className="text-xl font-bold text-blue-400">粘性力<InlineMath math="F_{viscous}"/></span>が必要ですね。<br/>
             今回は、簡単のため長さLの立方体の流体ブロックで力を考えてみましょう。空気が断面積Sを速度vで進行している場合空気の粘性係数をμとすると、
             </p>
