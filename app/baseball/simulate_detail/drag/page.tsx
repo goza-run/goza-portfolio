@@ -248,7 +248,7 @@ export default function DragPage() {
             <p className="text-gray-400 text-left mb-4">
             <InlineMath math="C_{d_{laminar}}"/>というのは今まで言っていた抵抗係数の最大値みたいなもんなのですが、細かくいうと<span className="font-bold text-blue-400">Drag Crisis(層流→乱流)が始まる前の抵抗係数</span>です。<br/>
             青は①が強く作用している範囲、赤は②が強く作用している範囲、紫はその両方が作用している範囲となります。<br/>
-            <InlineMath math="R_e\times10^{-5}=R_{e_{trans}}"/>の時、<InlineMath math="C_d=\frac{C_{d_{min}}-C_{d_{laminar}}}{2}"/>となり、最大と最小の中間になります。<br/>
+            <InlineMath math="R_e\times10^{-5}=R_{e_{trans}}"/>の時、<InlineMath math="C_d=\frac{C_{d_{min}}+C_{d_{laminar}}}{2}"/>となり、最大と最小の中間になります。<br/>
             <InlineMath math="R_e\times10^{-5}=10"/>の時、<InlineMath math="C_d=C_{d_{min}}+C_{rise}"/>です。また、kの値が大きいほど①の下降は急になります。<br/>
             NASAのグラフから<br/>
             </p>
