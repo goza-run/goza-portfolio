@@ -52,12 +52,12 @@ export default function Home(){
                 </div>
 
                 <div className="border border-gray-700 rounded-lg p-6 hover:bg-gray-800 transition">
-                    <h2 className="text-2xl font-semibold mb-2">Manpukuya</h2>
+                    <h2 className="text-2xl font-semibold mb-2">noteページ</h2>
                     <p className="text-gray-400 mb-4">
                         研究記録をnoteで書いています。いずれこっちにほぼ移行するかも。
                     </p>
                     <Link href="https://note.com/simulatebb" target='_blank' className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
-                        アプリへ
+                        noteページへ
                     </Link>
                 </div>
             
