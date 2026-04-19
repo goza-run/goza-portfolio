@@ -269,7 +269,7 @@ export default function DragPage() {
                                 height={600}
                                 className="my-4 rounded-lg border border-gray-700 w-full h-auto max-w-[600px]"
                                 />
-                                <p className="text-xl text-gray-400 text-sm">⚫️：80km/h, 🔴100km/h, 🟣:160km/h, 🟡:320km/h</p>
+                                <p className="text-xl text-gray-400 text-sm">⚫️:80km/h, 🔴:100km/h, 🟣:160km/h, 🟡:320km/h</p>
             </div>
             <p className="text-gray-400 text-left mb-4">
             いかがでしょうか？結構いい感じにできたと思っています。レイノルズ数ではわかりにくいので球速の点も置いてみましたが、<br/>
