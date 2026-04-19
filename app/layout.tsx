@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph:{
     title:"Goza's Portfolio",
-    description:"物理学科生の作る野球の等級シミュレーター。ボールの軌道に関しても理論的に解説",
+    description:"物理学科生の作る野球の投球シミュレーター。ボールの軌道に関しても理論的に解説",
     url: "https://goza-portfolio.vercel.app",
     siteName:"Goza's Portfolio",
     images:[
