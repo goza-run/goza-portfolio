@@ -294,6 +294,14 @@ export default function DragPage() {
             今回のデータをもとに球速と空気抵抗力の関係を見ると、60~80km/hはおそらくDrag Crisisの影響ですが、それを除いて考えた時に<br/>
             大体二乗に比例していると考えても良いでしょう、よっぽどリアリティを追求したいような変態でなければ。
             </p>
+            <h2 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">追記</h2>
+            <p className="text-gray-400 text-left mb-4">
+            分析が捗り、色々と新しい発見があったため、投球シミュレータの物理演算を更新しました。<br/>
+            詳しくはnoteを参照ください。<br/>
+                <Link href="https://note.com/simulatebb" target='_blank' className="inline-block bg-blue-600 text-white px-4 py-2 rounded">
+                    noteページへ
+                </Link>
+            </p>
             <h2 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">文献・URL</h2>
             <br/><br/>
             <p className="text-gray-400 text-left mb-4">
